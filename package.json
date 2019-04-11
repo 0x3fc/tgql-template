@@ -1,0 +1,26 @@
+{
+  "name": "type-graphql-template",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "ts-node-dev -r dotenv/config -r reflect-metadata --files src/server.ts"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "class-validator": "^0.9.1",
+    "dotenv": "^7.0.0",
+    "graphql": "^14.2.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^0.17.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/graphql": "^14.2.0",
+    "@types/node": "^11.13.4",
+    "ts-node": "^8.0.3",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typescript": "^3.4.3"
+  },
+  "repository": "https://github.com/senhungwong/type-graphql-template.git",
+  "author": "Sen Hung Wong <alexwongsenhung@gmail.com>",
+  "license": "MIT"
+}
