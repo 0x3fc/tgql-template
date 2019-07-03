@@ -1,0 +1,25 @@
+version: "3"
+services:
+  core:
+    build: .
+    ports:
+      - 4000:4000
+    volumes:
+      - ./src:/opt/app/src
+      - ./tests:/opt/app/tests
+      - ./.env:/opt/app/.env
+      - ./jest.config.js:/opt/app/jest.config.js
+      - ./nodemon.json:/opt/app/nodemon.json
+      - ./package.json:/opt/app/package.json
+      - ./tsconfig.json:/opt/app/tsconfig.json
+      - ./yarn.lock:/opt/app/yarn.lock
+    links:
+      - database
+  database:
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}

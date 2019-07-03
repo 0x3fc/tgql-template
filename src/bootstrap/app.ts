@@ -6,7 +6,7 @@ import { config } from "../config/config";
 export const createSchema = async () =>
   buildSchema({
     resolvers: config.graphql.resolver.paths,
-    emitSchemaFile: config.graphql.schema.emitPath
+    emitSchemaFile: config.graphql.schema.emitPath,
   });
 
 export const build = async () => {
@@ -20,7 +20,7 @@ export const build = async () => {
 
     playground: isProduction
       ? false
-      : (config.graphql.playground.settings as any)
+      : (config.graphql.playground.settings as any),
   });
 };
 
