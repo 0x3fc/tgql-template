@@ -6,7 +6,7 @@
     "test": "jest --verbose --forceExit --detectOpenHandles --runInBand"
   },
   "dependencies": {
-    "apollo-server": "^2.4.8",
+    "apollo-server": "^2.14.2",
     "class-validator": "^0.9.1",
     "dotenv": "^8.0.0",
     "graphql": "^14.2.1",
